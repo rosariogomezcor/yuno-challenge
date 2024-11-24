@@ -1,0 +1,187 @@
+/* General styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fc;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensure the entire content fits the viewport */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* Container for all content */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: center;
+    max-width: 1200px;
+    height: 100%; /* Use full viewport height */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    color: #4a4a4a;
+    font-size: 20px; /* Reduced font size to save space */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Product List */
+#product-list {
+    display: flex;
+    flex-wrap: wrap; /* Wrap products into rows */
+    gap: 10px; /* Smaller gap between products */
+    justify-content: center; /* Center products horizontally */
+    flex: 1; /* Allow the product list to grow and fill available space */
+    overflow-y: auto; /* Scroll within the product area if needed */
+    padding: 10px 0;
+}
+
+/* Individual Product */
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(30% - 10px); /* Each product takes up 30% of the row */
+    max-width: calc(30% - 10px);
+    box-sizing: border-box;
+    min-height: 200px; /* Adjusted for smaller layout */
+}
+
+/* Product Image */
+.product img {
+    width: 70px; /* Smaller image size */
+    height: 70px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Product Details */
+.product-details {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 16px; /* Reduced font size */
+    margin: 5px 0;
+    color: #333333;
+}
+
+.product .price {
+    font-size: 14px; /* Reduced font size */
+    color: #555555;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    padding: 8px 15px; /* Reduced padding */
+    background-color: #5a3aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; /* Smaller button text */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: stretch;
+    text-align: center;
+}
+
+.add-to-cart:hover {
+    background-color: #4125a5;
+}
+
+.add-to-cart:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Cart Section */
+#cart {
+    background-color: #ffffff;
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    width: 100%; /* Ensures it spans the available space */
+    text-align: center;
+}
+
+#cart h2 {
+    font-size: 16px; /* Reduced font size */
+    margin-bottom: 5px;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px; /* Smaller cart item text */
+}
+
+#cart-total {
+    font-size: 14px;
+    font-weight: bold;
+    text-align: right;
+    color: #333333;
+    margin-top: 5px;
+}
+
+/* Comprar Button */
+#comprar {
+    display: block;
+    width: 100%;
+    padding: 10px 0; /* Reduced padding */
+    background-color: #5a3aff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Slightly smaller text */
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#comprar:hover {
+    background-color: #4125a5;
+}
+
+/* Payment Form */
+#payment-form {
+    display: none; /* Hidden by default */
+    position: relative; /* No fixed positioning to avoid unnecessary blank space */
+    margin: 0 auto; /* Center horizontally */
+    top: -250px; /* Move the form 50px up */
+    background-color: #ffffff; /* White background for the form */
+    padding: 20px; /* Add internal padding */
+    border-radius: 8px; /* Rounded corners for design */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Use full available width */
+    max-width: 600px; /* Ensure it doesn’t exceed a reasonable size */
+    z-index: 1; /* Make sure it appears above other elements */
+    overflow: visible; /* Allow form content to flow naturally */
+}
+
+
+
+
+
+
+
+
+

@@ -7,59 +7,100 @@
   <link href="https://assets-global.website-files.com/6277c350218d32e9e5dc0380/627e9998bb4b6124743a90fc_favicon-yuno32x32.png" rel="shortcut icon" type="image/x-icon"/>
   <link href="https://assets-global.website-files.com/6277c350218d32e9e5dc0380/627e999c388c6cd2a87050e7_favicon-yuno256x256.png" rel="apple-touch-icon"/>
   <title>Yunique Fashion Store</title>
-  <!-- default fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
   <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/customstyles.css">
 </head>
 <body>
 
-  <h1>Yunique Fashion Store</h1>
+  <div class="container">
 
-  <!-- PRODUCTS -->
-  <div id="product-list">
-    <!-- Product 1 -->
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Elegant Dress">
-      <h2>Elegant Dress</h2>
-      <button class="add-to-cart" data-product="Elegant Dress">Add to Cart</button>
+    <h1><a href="/" style="text-decoration: none; color: inherit;">Yunique Fashion Store</a></h1>
+
+    <!-- PRODUCTS -->
+    <div id="product-list">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Elegant Dress">
+        <div class="product-details">
+          <h2>Elegant Dress</h2>
+          <p class="price">$49.99</p>
+        </div>
+        <button class="add-to-cart" data-product="Elegant Dress" data-price="49.99">Add to Cart</button>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Stylish Jacket">
+        <div class="product-details">
+          <h2>Stylish Jacket</h2>
+          <p class="price">$79.99</p>
+        </div>
+        <button class="add-to-cart" data-product="Stylish Jacket" data-price="79.99">Add to Cart</button>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Trendy Sneakers">
+        <div class="product-details">
+          <h2>Trendy Sneakers</h2>
+          <p class="price">$59.99</p>
+        </div>
+        <button class="add-to-cart" data-product="Trendy Sneakers" data-price="59.99">Add to Cart</button>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Casual Shirt">
+        <div class="product-details">
+          <h2>Casual Shirt</h2>
+          <p class="price">$39.99</p>
+        </div>
+        <button class="add-to-cart" data-product="Casual Shirt" data-price="39.99">Add to Cart</button>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Chic Skirt">
+        <div class="product-details">
+          <h2>Chic Skirt</h2>
+          <p class="price">$44.99</p>
+        </div>
+        <button class="add-to-cart" data-product="Chic Skirt" data-price="44.99">Add to Cart</button>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/150" alt="Formal Shoes">
+        <div class="product-details">
+          <h2>Formal Shoes</h2>
+          <p class="price">$89.99</p>
+        </div>
+        <button class="add-to-cart" data-product="Formal Shoes" data-price="89.99">Add to Cart</button>
+      </div>
+    </div>
+
+    <!-- Cart Section -->
+    <div id="cart">
+      <h2>Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="cart-total">Total: $0.00</p>
     </div>
   
-    <!-- Product 2 -->
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Stylish Jacket">
-      <h2>Stylish Jacket</h2>
-      <button class="add-to-cart" data-product="Stylish Jacket">Add to Cart</button>
+    <button id="comprar">Comprar</button>
+
+    <!-- Payment Form -->
+    <div id="payment-form">
+      <div id="root"></div>
+      <div id="form-element"></div>
+      <div id="action-form-element"></div>
+      <button id="button-pay">Pagar Ahora</button>
+      <loader-message id="loader"></loader-message>
     </div>
-  
-    <!-- Product 3 -->
-    <div class="product">
-      <img src="https://via.placeholder.com/150" alt="Trendy Sneakers">
-      <h2>Trendy Sneakers</h2>
-      <button class="add-to-cart" data-product="Trendy Sneakers">Add to Cart</button>
-    </div>
+
   </div>
 
-  <!-- Cart Section -->
-  <div id="cart">
-    <h2>Cart</h2>
-    <ul id="cart-items"></ul>
-  </div>
-  
-  <button id="comprar">Comprar</button>
-  
-  <div id="payment-form">
-    <div id="root"></div>
-    <div id="form-element"></div>
-    <div id="action-form-element"></div>
-
-    <!-- merchant should create a button to start payment flow after the user has selected a payment method -->
-    <button id="button-pay"> Ahora</button>
-    <loader-message id="loader"></loader-message>
-  </div>
-
-  <!-- include Yuno SDK -->
   <script src="https://sdk-web.y.uno/v1/static/js/main.min.js"></script>
-
   <script src="/static/app.js"></script>
   <script type="module" src="/static/checkout.js"></script>
   <script src="/static/loader.js"></script>
